@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;700&family=Kode+Mono:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+
+:root {
+    /* Color Palette - Muted Sunset */
+    --bg-color: hsl(240, 15%, 5%);
+    --card-bg: hsla(240, 15%, 10%, 0.7);
+    --primary-color: hsl(270, 70%, 65%);
+    --secondary-color: hsl(30, 85%, 65%);
+    --accent-color: hsl(150, 60%, 60%);
+    --text-main: hsl(0, 0%, 95%);
+    --text-soft: hsl(0, 0%, 75%);
+    --border-color: hsla(0, 0%, 100%, 0.1);
+    
+    --font-heading: 'Pixelify Sans', cursive;
+    --font-mono: 'Kode Mono', monospace;
+    --font-main: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* CRT Scanline Effect */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        hsla(0,0%,100%,0) 50%, 
+        hsla(0,0%,0%,.15) 50%
+    ), linear-gradient(
+        90deg, 
+        hsla(255,0%,0%,.05), 
+        hsla(0,100%,100%,.05)
+    );
+    background-size: 100% 4px, 4px 100%;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.3;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://grainy-gradients.vercel.app/noise.svg');
+    opacity: 0.1;
+    pointer-events: none;
+    z-index: 10000;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--primary-color);
+}
+
+.logo span {
+    color: var(--secondary-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-soft);
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+    padding: 6rem 0 4rem;
+    text-align: center;
+}
+
+.hero h1 {
+    font-family: var(--font-heading);
+    font-size: 4.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 10px hsla(270, 70%, 65%, 0.3));
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--text-soft);
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero .cta-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-primary {
+    background-color: var(--text-main);
+    color: var(--bg-color);
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px hsla(0, 0%, 100%, 0.3);
+}
+
+.btn-outline {
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    background: var(--card-bg);
+}
+
+.btn-outline:hover {
+    background: hsla(0, 0%, 100%, 0.05);
+    border-color: var(--text-soft);
+}
+
+/* App Showcase */
+.showcase {
+    position: relative;
+    padding: 4rem 0;
+}
+
+.mockup-container {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    padding: 1rem;
+    box-shadow: 0 30px 60px hsla(0, 0%, 0%, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+.mockup-image {
+    width: 100%;
+    border-radius: 16px;
+    display: block;
+}
+
+/* Features */
+.features {
+    padding: 8rem 0;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 2.5rem;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-color);
+}
+
+.feature-icon {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    padding: 1rem;
+    background: hsla(270, 70%, 65%, 0.1);
+    border-radius: 12px;
+}
+
+.feature-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.feature-card p {
+    color: var(--text-soft);
+    font-size: 0.95rem;
+}
+
+/* Legal/Support Section */
+.legal-support {
+    padding: 6rem 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.legal-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 4rem;
+}
+
+.footer-info h4 {
+    font-family: var(--font-heading);
+    margin-bottom: 1.5rem;
+}
+
+.footer-info p {
+    color: var(--text-soft);
+    margin-bottom: 1.5rem;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: var(--text-soft);
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+.copyright {
+    text-align: center;
+    padding: 3rem 0;
+    color: var(--text-soft);
+    font-size: 0.8rem;
+    font-family: var(--font-mono);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero h1, .hero p, .cta-container {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+.hero p { animation-delay: 0.2s; }
+.cta-container { animation-delay: 0.4s; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 3rem; }
+    .nav-links { display: none; }
+    .legal-grid { grid-template-columns: 1fr; gap: 2rem; }
+}
