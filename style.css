@@ -200,6 +200,80 @@ nav {
     display: block;
 }
 
+/* App Experience Showcase */
+.experience {
+    padding: 8rem 0;
+    text-align: center;
+}
+
+.section-header p {
+    color: var(--text-soft);
+    margin-bottom: 4rem;
+    font-size: 1.1rem;
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.experience-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.phone-mockup {
+    width: 280px;
+    height: 580px;
+    background: #000;
+    border-radius: 40px;
+    padding: 12px;
+    border: 8px solid #1a1a1a;
+    box-shadow: 0 50px 100px -20px rgba(0,0,0,0.5), 
+                0 30px 60px -30px rgba(0,0,0,0.6),
+                inset 0 0 0 2px hsla(0,0%,100%,0.1);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.phone-mockup:hover {
+    transform: translateY(-20px) scale(1.02);
+}
+
+/* Speaker & Camera cutout simulation */
+.phone-mockup::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 25px;
+    background: #000;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    z-index: 10;
+}
+
+.phone-mockup img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 28px;
+    display: block;
+}
+
+.experience-item span {
+    font-family: var(--font-mono);
+    color: var(--text-soft);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
 /* Features */
 .features {
     padding: 8rem 0;
@@ -313,6 +387,13 @@ nav {
 .cta-container { animation-delay: 0.4s; }
 
 /* Responsive */
+@media (max-width: 900px) {
+    .experience-grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+}
+
 @media (max-width: 768px) {
     .hero h1 { font-size: 3rem; }
     .nav-links { display: none; }
