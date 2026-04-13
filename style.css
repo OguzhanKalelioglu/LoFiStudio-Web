@@ -100,6 +100,7 @@ nav {
     display: flex;
     gap: 2rem;
     list-style: none;
+    align-items: center;
 }
 
 .nav-links a {
@@ -112,6 +113,18 @@ nav {
 
 .nav-links a:hover {
     color: var(--primary-color);
+}
+
+/* Nav Buy Me Coffee - compact version */
+.nav-bmc {
+    display: flex;
+    align-items: center;
+}
+
+.nav-bmc .bmc-button-container,
+.nav-bmc a.bmc-button {
+    transform: scale(0.8);
+    transform-origin: right center;
 }
 
 /* Hero Section */
@@ -363,6 +376,40 @@ nav {
 
 .footer-links a:hover {
     color: var(--primary-color);
+}
+
+/* Buy Me Coffee Section */
+.buy-me-coffee {
+    padding: 4rem 0;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+    background: linear-gradient(135deg, hsla(270, 70%, 65%, 0.05), hsla(30, 85%, 65%, 0.05));
+}
+
+.coffee-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.coffee-container h3 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+}
+
+.coffee-container p {
+    color: var(--text-soft);
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+/* Center the Buy Me Coffee button */
+.coffee-container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .copyright {
