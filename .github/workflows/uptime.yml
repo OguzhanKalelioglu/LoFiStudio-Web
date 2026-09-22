@@ -1,0 +1,72 @@
+name: Production uptime
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: production-uptime
+  cancel-in-progress: true
+
+jobs:
+  end-to-end:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Verify website, catalog, and audio playback
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          SITE_URL="https://lofistudio.app"
+          SUPABASE_URL="https://svigwxofgvzpdwzdeiur.supabase.co"
+          SUPABASE_KEY="sb_publishable_Yg9_yPkeenZjYK2rEcrTUw_b4QYkGJa"
+
+          index_html="$(curl --fail --silent --show-error --location --max-time 20 "$SITE_URL/")"
+          bundle_path="$(printf '%s' "$index_html" | sed -n 's/.*<script src="\(app-[^"]*\.js\)"><\/script>.*/\1/p' | tail -1)"
+          test -n "$bundle_path"
+
+          bundle="$(curl --fail --silent --show-error --max-time 20 "$SITE_URL/$bundle_path")"
+          printf '%s' "$bundle" | grep -q "svigwxofgvzpdwzdeiur.supabase.co"
+
+          catalog="$(curl --fail --silent --show-error --max-time 20 \
+            --request POST \
+            --header "apikey: $SUPABASE_KEY" \
+            --header "Authorization: Bearer $SUPABASE_KEY" \
+            --header "Content-Type: application/json" \
+            --data '{}' \
+            "$SUPABASE_URL/rest/v1/rpc/get_catalog")"
+
+          CATALOG="$catalog" node <<'NODE'
+          const catalog = JSON.parse(process.env.CATALOG);
+          const categories = catalog.categories ?? [];
+          const playlists = categories.flatMap((category) => category.playlists ?? []);
+          const tracks = playlists.flatMap((playlist) => playlist.tracks ?? []);
+
+          if (categories.length === 0) throw new Error("Catalog has no categories");
+          if (playlists.length === 0) throw new Error("Catalog has no playlists");
+          if (tracks.length === 0) throw new Error("Catalog has no tracks");
+
+          const empty = playlists.filter((playlist) => (playlist.tracks ?? []).length === 0);
+          if (empty.length > 0) {
+            throw new Error(`Empty playlists: ${empty.map((playlist) => playlist.id).join(", ")}`);
+          }
+
+          NODE
+
+          asset_key="$(CATALOG="$catalog" node -e 'const c=JSON.parse(process.env.CATALOG); process.stdout.write(c.categories.flatMap(x=>x.playlists||[]).flatMap(x=>x.tracks||[])[0].assetKey)')"
+          playback="$(curl --fail --silent --show-error --max-time 20 \
+            --request POST \
+            --header "apikey: $SUPABASE_KEY" \
+            --header "Authorization: Bearer $SUPABASE_KEY" \
+            --header "Content-Type: application/json" \
+            --data "{\"assetKey\":\"$asset_key\"}" \
+            "$SUPABASE_URL/functions/v1/playback-url")"
+          audio_url="$(PLAYBACK="$playback" node -e 'process.stdout.write(JSON.parse(process.env.PLAYBACK).url)')"
+
+          bytes="$(curl --fail --silent --show-error --max-time 20 --range 0-1023 "$audio_url" | wc -c | tr -d ' ')"
+          test "$bytes" -eq 1024
