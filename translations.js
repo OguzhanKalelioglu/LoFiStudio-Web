@@ -1,8 +1,8 @@
 // LoFiStudio Web Player Translation Dictionary & Helper
 const LOFI_TRANSLATIONS = {
   de: {
-    page_title: "LoFiStudio Web Player | Finde dein eigenes Tempo",
-    meta_description: "Beruhige deinen Geist, konzentriere dich und schlafe mit LoFiStudio. Höre kuratierte Lo-Fi-Playlists, betrieben von Supabase, direkt in deinem Browser.",
+    page_title: "LoFiStudio | Fokus- und Lernmusik",
+    meta_description: "Konzentriere dich mit nur einem Tippen. Kostenlose, ununterbrochene Lo-Fi-Playlists für Lernen, Programmieren und Deep Work.",
     search_placeholder: "Titel oder Playlists suchen...",
     discover_title: "Entdecken",
     nav_home: "Startseite",
@@ -11,7 +11,7 @@ const LOFI_TRANSLATIONS = {
     nav_favorites: "Favoriten",
     nav_library: "Bibliothek",
     download_card_title: "LoFiStudio iOS",
-    download_card_desc: "Lade die mobile App herunter, um werbefrei und offline zu hören.",
+    download_card_desc: "Höre in der App werbefrei, im Hintergrund und über CarPlay.",
     download_card_btn: "App herunterladen",
     mob_nav_download: "Herunterladen",
     today_shelf_title: "Für heute ausgewählt",
@@ -58,8 +58,8 @@ const LOFI_TRANSLATIONS = {
     search_results_details: "// %count% Playlists für \"%query%\""
   },
   en: {
-    page_title: "LoFiStudio Web Player | Find Your Inner Pace",
-    meta_description: "Calm your mind, focus and sleep with LoFiStudio. Listen to curated Lo-Fi playlists powered by Supabase directly from your browser.",
+    page_title: "LoFiStudio | Focus & Study Music",
+    meta_description: "Start focusing in one tap. Free, uninterrupted Lo-Fi playlists for studying, coding, and deep work.",
     search_placeholder: "Search tracks or playlists...",
     discover_title: "Discover",
     nav_home: "Home",
@@ -68,7 +68,7 @@ const LOFI_TRANSLATIONS = {
     nav_favorites: "Favorites",
     nav_library: "Library",
     download_card_title: "LoFiStudio iOS",
-    download_card_desc: "Download the mobile app to listen ad-free and offline.",
+    download_card_desc: "Listen ad-free, in the background, and with CarPlay in the mobile app.",
     download_card_btn: "Download App",
     mob_nav_download: "Download",
     today_shelf_title: "Picked for Today",
@@ -115,8 +115,8 @@ const LOFI_TRANSLATIONS = {
     search_results_details: "// %count% playlists for \"%query%\""
   },
   es: {
-    page_title: "LoFiStudio Web Player | Encuentra tu propio ritmo",
-    meta_description: "Calma tu mente, concéntrate y duerme con LoFiStudio. Escucha listas de reproducción Lo-Fi seleccionadas con tecnología de Supabase directamente desde tu navegador.",
+    page_title: "LoFiStudio | Música para concentrarte y estudiar",
+    meta_description: "Concéntrate con un toque. Playlists Lo-Fi gratuitas y sin interrupciones para estudiar, programar y trabajar en profundidad.",
     search_placeholder: "Buscar pistas o listas...",
     discover_title: "Descubrir",
     nav_home: "Inicio",
@@ -125,7 +125,7 @@ const LOFI_TRANSLATIONS = {
     nav_favorites: "Favoritos",
     nav_library: "Biblioteca",
     download_card_title: "LoFiStudio iOS",
-    download_card_desc: "Descarga la aplicación móvil para escuchar sin anuncios y sin conexión.",
+    download_card_desc: "Escucha sin anuncios, en segundo plano y con CarPlay en la app móvil.",
     download_card_btn: "Descargar aplicación",
     mob_nav_download: "Descargar",
     today_shelf_title: "Selección para hoy",
@@ -172,8 +172,8 @@ const LOFI_TRANSLATIONS = {
     search_results_details: "// %count% listas de reproducción para \"%query%\""
   },
   fr: {
-    page_title: "LoFiStudio Web Player | Trouvez votre propre rythme",
-    meta_description: "Calmez votre esprit, concentrez-vous et dormez avec LoFiStudio. Écoutez des playlists Lo-Fi sélectionnées avec soin, propulsées par Supabase, directement depuis votre navigateur.",
+    page_title: "LoFiStudio | Musique pour se concentrer et étudier",
+    meta_description: "Concentrez-vous en un geste. Des playlists Lo-Fi gratuites et sans interruption pour étudier, coder et travailler en profondeur.",
     search_placeholder: "Rechercher des morceaux ou playlists...",
     discover_title: "Découvrir",
     nav_home: "Accueil",
@@ -182,7 +182,7 @@ const LOFI_TRANSLATIONS = {
     nav_favorites: "Favoris",
     nav_library: "Bibliothèque",
     download_card_title: "LoFiStudio iOS",
-    download_card_desc: "Téléchargez l'application mobile pour écouter sans publicité et hors ligne.",
+    download_card_desc: "Écoutez sans publicité, en arrière-plan et avec CarPlay dans l'app mobile.",
     download_card_btn: "Télécharger l'app",
     mob_nav_download: "Télécharger",
     today_shelf_title: "Sélection pour aujourd'hui",
@@ -229,8 +229,8 @@ const LOFI_TRANSLATIONS = {
     search_results_details: "// %count% playlists pour \"%query%\""
   },
   it: {
-    page_title: "LoFiStudio Web Player | Trova il tuo ritmo interiore",
-    meta_description: "Calma la mente, concentrati e dormi con LoFiStudio. Ascolta playlist Lo-Fi curate, alimentate da Supabase, direttamente dal tuo browser.",
+    page_title: "LoFiStudio | Musica per concentrarsi e studiare",
+    meta_description: "Concentrati con un tocco. Playlist Lo-Fi gratuite e senza interruzioni per studiare, programmare e lavorare in profondità.",
     search_placeholder: "Cerca brani o playlist...",
     discover_title: "Scopri",
     nav_home: "Home",
@@ -239,7 +239,7 @@ const LOFI_TRANSLATIONS = {
     nav_favorites: "Preferiti",
     nav_library: "Libreria",
     download_card_title: "LoFiStudio iOS",
-    download_card_desc: "Scarica l'app mobile per ascoltare senza pubblicità e offline.",
+    download_card_desc: "Ascolta senza pubblicità, in background e con CarPlay nell'app mobile.",
     download_card_btn: "Scarica l'app",
     mob_nav_download: "Scarica",
     today_shelf_title: "Scelti per oggi",
@@ -286,8 +286,8 @@ const LOFI_TRANSLATIONS = {
     search_results_details: "// %count% playlist per \"%query%\""
   },
   ja: {
-    page_title: "LoFiStudio Web Player | 自分だけのペースを見つける",
-    meta_description: "LoFiStudioで心を落ち着かせ、集中し、眠りましょう。Supabaseを利用した厳選されたLo-Fiプレイリストをブラウザから直接聴くことができます。",
+    page_title: "LoFiStudio | 集中と勉強のための音楽",
+    meta_description: "ワンタップで集中。勉強、コーディング、ディープワーク向けの無料で途切れないLo-Fiプレイリスト。",
     search_placeholder: "トラックやプレイリストを検索...",
     discover_title: "発見する",
     nav_home: "ホーム",
@@ -296,7 +296,7 @@ const LOFI_TRANSLATIONS = {
     nav_favorites: "お気に入り",
     nav_library: "ライブラリ",
     download_card_title: "LoFiStudio iOS",
-    download_card_desc: "モバイルアプリをダウンロードして、広告なしでオフラインで聴く。",
+    download_card_desc: "モバイルアプリなら広告なし、バックグラウンド、CarPlayで再生できます。",
     download_card_btn: "アプリをダウンロード",
     mob_nav_download: "ダウンロード",
     today_shelf_title: "今日のピックアップ",
@@ -343,8 +343,8 @@ const LOFI_TRANSLATIONS = {
     search_results_details: "// \"%query%\" の %count% プレイリスト"
   },
   ko: {
-    page_title: "LoFiStudio Web Player | 나만의 페이스를 찾아서",
-    meta_description: "LoFiStudio로 마음을 진정시키고, 집중하고, 잠드세요. Supabase가 제공하는 엄선된 Lo-Fi 플레이리스트를 브라우저에서 바로 감상하세요.",
+    page_title: "LoFiStudio | 집중과 공부를 위한 음악",
+    meta_description: "한 번의 탭으로 집중하세요. 공부, 코딩, 딥워크를 위한 무료 무중단 Lo-Fi 플레이리스트.",
     search_placeholder: "트랙 또는 플레이리스트 검색...",
     discover_title: "찾아보기",
     nav_home: "홈",
@@ -353,7 +353,7 @@ const LOFI_TRANSLATIONS = {
     nav_favorites: "즐겨찾기",
     nav_library: "라이브러리",
     download_card_title: "LoFiStudio iOS",
-    download_card_desc: "모바일 앱을 다운로드하여 광고 없이 오프라인으로 감상하세요.",
+    download_card_desc: "모바일 앱에서 광고 없이 백그라운드 및 CarPlay로 감상하세요.",
     download_card_btn: "앱 다운로드",
     mob_nav_download: "다운로드",
     today_shelf_title: "오늘의 추천",
@@ -400,8 +400,8 @@ const LOFI_TRANSLATIONS = {
     search_results_details: "// \"%query%\"에 대한 플레이리스트 %count%개"
   },
   "pt-BR": {
-    page_title: "LoFiStudio Web Player | Encontre o seu próprio ritmo",
-    meta_description: "Acalme sua mente, concentre-se e durma com o LoFiStudio. Ouça playlists Lo-Fi selecionadas, alimentadas pelo Supabase, diretamente do seu navegador.",
+    page_title: "LoFiStudio | Música para focar e estudar",
+    meta_description: "Concentre-se com um toque. Playlists Lo-Fi gratuitas e sem interrupções para estudar, programar e trabalhar com foco.",
     search_placeholder: "Buscar faixas ou playlists...",
     discover_title: "Descobrir",
     nav_home: "Início",
@@ -410,7 +410,7 @@ const LOFI_TRANSLATIONS = {
     nav_favorites: "Favoritos",
     nav_library: "Biblioteca",
     download_card_title: "LoFiStudio iOS",
-    download_card_desc: "Baixe o aplicativo móvel para ouvir sem anúncios e offline.",
+    download_card_desc: "Ouça sem anúncios, em segundo plano e com CarPlay no aplicativo móvel.",
     download_card_btn: "Baixar App",
     mob_nav_download: "Baixar",
     today_shelf_title: "Escolhidas para hoje",
@@ -457,8 +457,8 @@ const LOFI_TRANSLATIONS = {
     search_results_details: "// %count% playlists para \"%query%\""
   },
   tr: {
-    page_title: "LoFiStudio Web Player | Zihnini Sakinleştir",
-    meta_description: "LoFiStudio ile zihnini sakinleştir, odaklan ve uyu. Supabase altyapısıyla beslenen, özenle seçilmiş Lo-Fi çalma listelerini tarayıcından hemen dinle.",
+    page_title: "LoFiStudio | Odaklanma ve Ders Müziği",
+    meta_description: "Tek dokunuşla odaklan. Ders, kodlama ve derin çalışma seansların için kesintisiz Lo-Fi çalma listelerini ücretsiz dinle.",
     search_placeholder: "Şarkı veya çalma listesi ara...",
     discover_title: "Keşfet",
     nav_home: "Ana Sayfa",
@@ -467,7 +467,7 @@ const LOFI_TRANSLATIONS = {
     nav_favorites: "Favorilerim",
     nav_library: "Kitaplık",
     download_card_title: "LoFiStudio iOS",
-    download_card_desc: "Mobil uygulamayı indirerek reklamsız ve çevrimdışı dinle.",
+    download_card_desc: "Mobil uygulamada reklamsız, arka planda ve CarPlay ile dinle.",
     download_card_btn: "Uygulamayı İndir",
     mob_nav_download: "İndir",
     today_shelf_title: "Bugün İçin Seçilenler",
