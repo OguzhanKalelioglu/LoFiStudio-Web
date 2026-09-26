@@ -27,11 +27,11 @@ jobs:
           SUPABASE_KEY="sb_publishable_Yg9_yPkeenZjYK2rEcrTUw_b4QYkGJa"
 
           index_html="$(curl --fail --silent --show-error --location --max-time 20 "$SITE_URL/")"
-          bundle_path="$(printf '%s' "$index_html" | sed -n 's/.*<script src="\(app-[^"]*\.js\)"><\/script>.*/\1/p' | tail -1)"
+          bundle_path="$(printf '%s' "$index_html" | sed -nE 's|.*<script src="(app-[^"?]+\.js)(\?[^\"]*)?"></script>.*|\1|p' | tail -1)"
           test -n "$bundle_path"
 
           bundle="$(curl --fail --silent --show-error --max-time 20 "$SITE_URL/$bundle_path")"
-          printf '%s' "$bundle" | grep -q "svigwxofgvzpdwzdeiur.supabase.co"
+          [[ "$bundle" == *"svigwxofgvzpdwzdeiur.supabase.co"* ]]
 
           catalog="$(curl --fail --silent --show-error --max-time 20 \
             --request POST \
