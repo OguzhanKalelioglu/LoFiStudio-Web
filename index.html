@@ -4,19 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LoFiStudio | Focus &amp; Study Music</title>
-    <meta name="description" content="Tek dokunuşla odaklan. Ders, kodlama ve derin çalışma seansların için kesintisiz Lo-Fi çalma listelerini ücretsiz dinle.">
+    <meta name="description" content="Start focusing in one tap. Free, uninterrupted Lo-Fi playlists for studying, coding, and deep work.">
     <meta name="theme-color" content="#07050a">
     
     <!-- Open Graph -->
     <meta property="og:title" content="LoFiStudio | Focus &amp; Study Music">
-    <meta property="og:description" content="Ders, kodlama ve derin çalışma seansları için kesintisiz Lo-Fi.">
+    <meta property="og:description" content="Free, uninterrupted Lo-Fi playlists for studying, coding, and deep work.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://lofistudio.app">
+    <meta property="og:url" content="https://lofistudio.app/">
     <meta property="og:image" content="https://lofistudio.app/hero-mockup.png">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="LoFiStudio | Focus &amp; Study Music">
+    <meta name="twitter:description" content="Free, uninterrupted Lo-Fi playlists for studying, coding, and deep work.">
+    <meta name="twitter:image" content="https://lofistudio.app/hero-mockup.png">
     
-    <link rel="stylesheet" href="style.css">
-    <link rel="canonical" href="https://lofistudio.app">
+    <link rel="stylesheet" href="style.css?v=20260926-focus">
+    <link rel="canonical" href="https://lofistudio.app/">
     <link rel="icon" type="image/png" href="https://fav.farm/🎧">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"LoFi Studio","alternateName":"LoFiStudio","url":"https://lofistudio.app/"},{"@type":"MobileApplication","name":"LoFi Studio","url":"https://apps.apple.com/app/lofi-studio/id6761550819","operatingSystem":"iOS 17.0 or later","applicationCategory":"MultimediaApplication","description":"Lo-Fi music for focus, sleep, and relaxation on iPhone and iPad.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}]}
+    </script>
     
     <!-- Supabase JS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
@@ -37,22 +45,22 @@
             
             <nav class="sidebar-nav">
                 <div class="nav-section">
-                    <div class="nav-section-title" data-i18n="discover_title">Keşfet</div>
+                    <div class="nav-section-title" data-i18n="discover_title">Discover</div>
                     <div class="nav-item active" id="nav-discover">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-                        <span data-i18n="nav_home">Ana Sayfa</span>
+                        <span data-i18n="nav_home">Home</span>
                     </div>
                     <div class="nav-item" id="nav-categories">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>
-                        <span data-i18n="nav_categories">Kategoriler</span>
+                        <span data-i18n="nav_categories">Categories</span>
                     </div>
                 </div>
                 
                 <div class="nav-section">
-                    <div class="nav-section-title" data-i18n="library_title">Kütüphane</div>
+                    <div class="nav-section-title" data-i18n="library_title">Library</div>
                     <div class="nav-item" id="nav-favorites">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
-                        <span data-i18n="nav_favorites">Favorilerim</span>
+                        <span data-i18n="nav_favorites">Favorites</span>
                     </div>
                 </div>
             </nav>
@@ -60,12 +68,15 @@
             <div class="sidebar-footer">
                 <div class="download-app-card">
                     <h4 data-i18n="download_card_title">LoFiStudio iOS</h4>
-                    <p data-i18n="download_card_desc">Mobil uygulamada reklamsız, arka planda ve CarPlay ile dinle.</p>
+                    <p data-i18n="download_card_desc">Listen ad-free and in the background in the mobile app.</p>
                     <a href="https://apps.apple.com/app/lofi-studio/id6761550819?ct=web_sidebar" target="_blank" rel="noopener noreferrer" class="btn-sm-primary" data-i18n="download_card_btn">
-                        Uygulamayı İndir
+                        Download App
                     </a>
                 </div>
-                <a href="/privacy.html" style="display:block;margin-top:12px;text-align:center;color:var(--text-soft);font-size:.75rem;text-decoration:none;">Privacy</a>
+                <div class="sidebar-legal-links">
+                    <a href="#support" data-i18n="support_title">Support</a>
+                    <a href="/privacy">Privacy</a>
+                </div>
             </div>
         </aside>
         
@@ -76,7 +87,7 @@
             <header class="header">
                 <div class="search-bar">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                    <input type="text" id="search-input" data-i18n-placeholder="search_placeholder" placeholder="Şarkı veya çalma listesi ara...">
+                    <input type="text" id="search-input" data-i18n-placeholder="search_placeholder" placeholder="Search tracks or playlists...">
                 </div>
                 
                 <div class="header-right">
@@ -102,6 +113,13 @@
             
             <!-- CONTENT BODY -->
             <div class="content-body">
+                <section class="site-intro" aria-label="LoFi Studio">
+                    <h1 data-i18n="page_title">LoFiStudio | Focus &amp; Study Music</h1>
+                    <p data-i18n="meta_description">Start focusing in one tap. Free, uninterrupted Lo-Fi playlists for studying, coding, and deep work.</p>
+                    <a class="site-focus-link" id="focus-page-link" href="/focus-music" data-i18n="focus_page_link">Explore focus music</a>
+                    <a class="site-focus-link" href="/pomodoro-focus" data-i18n="pomodoro_page_link">Try a 25-minute focus timer</a>
+                    <a class="site-focus-link" id="sleep-page-link" href="/sleep-music" data-i18n="sleep_page_link">Explore sleep music</a>
+                </section>
                 
                 <!-- 1. DISCOVER VIEW (ANA SAYFA) -->
                 <div id="view-discover-panel">
@@ -120,7 +138,7 @@
                     <!-- Today Shelf (Home Sections) -->
                     <section class="playlists-shelf" id="today-shelf">
                         <div class="section-title" id="today-shelf-title">
-                            <span data-i18n="today_shelf_title">Bugün İçin Seçilenler</span>
+                            <span data-i18n="today_shelf_title">Picked for Today</span>
                             <span id="today-date-badge">// mix</span>
                         </div>
                         <div class="playlists-grid" id="today-playlists-grid">
@@ -131,7 +149,7 @@
                     <!-- Categories Preview Shelf -->
                     <section class="categories-shelf">
                         <div class="section-title">
-                            <span data-i18n="explore_categories_title">Kategorileri Keşfet</span>
+                            <span data-i18n="explore_categories_title">Explore Categories</span>
                             <span>// categories</span>
                         </div>
                         <div class="categories-grid" id="discover-categories-grid">
@@ -144,7 +162,7 @@
                 <div id="view-categories-panel" style="display: none;">
                     <section class="categories-shelf">
                         <div class="section-title">
-                            <span data-i18n="all_categories_title">Tüm Kategoriler</span>
+                            <span data-i18n="all_categories_title">All Categories</span>
                             <span>// all categories</span>
                         </div>
                         <div class="categories-grid" id="all-categories-grid">
@@ -154,7 +172,7 @@
                     
                     <section class="playlists-shelf" style="margin-top: 2rem;">
                         <div class="section-title">
-                            <span data-i18n="all_playlists_title">Tüm Çalma Listeleri</span>
+                            <span data-i18n="all_playlists_title">All Playlists</span>
                             <span>// playlists</span>
                         </div>
                         <div class="playlists-grid" id="all-playlists-grid">
@@ -167,17 +185,22 @@
                 <div id="view-favorites-panel" style="display: none;">
                     <section class="playlists-shelf">
                         <div class="section-title">
-                            <span data-i18n="favorites_title">Beğendiğim Şarkılar</span>
-                            <span id="favorites-count">// 0 parça</span>
+                            <span data-i18n="favorites_title">Liked Songs</span>
+                            <span id="favorites-count">// 0 tracks</span>
                         </div>
                         <div class="tracks-list" id="favorites-tracks-list">
                             <!-- Dynamic favorited tracks -->
                             <div style="text-align: center; padding: 3rem; color: var(--text-muted);" data-i18n="no_favorites_text">
-                                Henüz favorilere eklenmiş bir parça yok. Şarkı listelerindeki kalp simgesine basarak ekleyebilirsiniz.
+                                No favorites yet. Save tracks you love with the heart icon.
                             </div>
                         </div>
                     </section>
                 </div>
+
+                <section class="site-support" id="support" aria-labelledby="support-heading">
+                    <h2 id="support-heading" data-i18n="support_title">Support</h2>
+                    <p data-i18n="support_instruction">Need help with the iPhone app? Open LoFi Studio, go to Settings, then tap Send Feedback. You can report a problem or ask us a question there.</p>
+                </section>
                 
             </div>
         </main>
@@ -186,19 +209,19 @@
         <nav class="mobile-navbar">
             <div class="mobile-nav-item active" id="mob-nav-discover">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-                <span data-i18n="nav_home">Ana Sayfa</span>
+                <span data-i18n="nav_home">Home</span>
             </div>
             <div class="mobile-nav-item" id="mob-nav-categories">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>
-                <span data-i18n="nav_categories">Kategoriler</span>
+                <span data-i18n="nav_categories">Categories</span>
             </div>
             <div class="mobile-nav-item" id="mob-nav-favorites">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
-                <span data-i18n="nav_library">Kitaplık</span>
+                <span data-i18n="nav_library">Library</span>
             </div>
             <a href="https://apps.apple.com/app/lofi-studio/id6761550819?ct=web_mobile_nav" target="_blank" rel="noopener noreferrer" class="mobile-nav-item" style="color: var(--text-muted)">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                <span data-i18n="mob_nav_download">İndir</span>
+                <span data-i18n="mob_nav_download">Download</span>
             </a>
         </nav>
         
@@ -241,8 +264,8 @@
                     <img src="https://fav.farm/🎧" alt="" class="player-artwork" id="player-artwork-img">
                 </div>
                 <div class="player-meta">
-                    <div class="player-title" id="player-track-title" data-i18n="no_track_selected">Müzik Seçilmedi</div>
-                    <div class="player-artist" id="player-track-artist" data-i18n="select_track_prompt">Dinlemek için bir çalma listesinden parça seçin.</div>
+                    <div class="player-title" id="player-track-title" data-i18n="no_track_selected">No Track Selected</div>
+                    <div class="player-artist" id="player-track-artist" data-i18n="select_track_prompt">Select a track from a playlist to start listening.</div>
                 </div>
                 <button class="player-fav-btn" id="player-fav-toggle" style="display: none;">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
@@ -252,16 +275,16 @@
             <!-- Controls (Center) -->
             <div class="player-middle-controls">
                 <div class="player-buttons">
-                    <button class="player-btn player-btn-secondary" id="player-btn-shuffle" data-i18n-title="tooltip_shuffle" title="Karışık Çal">
+                    <button class="player-btn player-btn-secondary" id="player-btn-shuffle" data-i18n-title="tooltip_shuffle" title="Shuffle">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
                     </button>
-                    <button class="player-btn" id="player-btn-prev" data-i18n-title="tooltip_previous" title="Önceki Şarkı">
+                    <button class="player-btn" id="player-btn-prev" data-i18n-title="tooltip_previous" title="Previous Track">
                         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6 8.5 6V6z"/></svg>
                     </button>
                     <button class="player-btn player-btn-play" id="player-btn-play" data-i18n-title="tooltip_play_pause" title="Oynat / Duraklat">
                         <svg viewBox="0 0 24 24" fill="currentColor" id="player-play-icon"><path d="M8 5v14l11-7z"/></svg>
                     </button>
-                    <button class="player-btn" id="player-btn-next" data-i18n-title="tooltip_next" title="Sonraki Şarkı">
+                    <button class="player-btn" id="player-btn-next" data-i18n-title="tooltip_next" title="Next Track">
                         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg>
                     </button>
                     <button class="player-btn player-btn-secondary" id="player-btn-repeat" data-i18n-title="tooltip_repeat" title="Tekrarla">
@@ -301,7 +324,7 @@
     <!-- Hidden HTML5 Audio Element -->
     <audio id="html5-audio" preload="auto"></audio>
 
-    <script src="translations.js"></script>
-    <script src="app-9e1ed53.js"></script>
+    <script src="translations.js?v=20260926-sleep"></script>
+    <script src="app-9e1ed53.js?v=20260926-tr-sleep"></script>
 </body>
 </html>

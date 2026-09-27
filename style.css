@@ -201,6 +201,23 @@ body::after {
     border-top: 1px solid var(--border);
 }
 
+.sidebar-legal-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 12px;
+    font-size: .75rem;
+}
+
+.sidebar-legal-links a {
+    color: var(--text-soft);
+    text-decoration: none;
+}
+
+.sidebar-legal-links a:hover {
+    color: var(--text-main);
+}
+
 .download-app-card {
     background: linear-gradient(135deg, rgba(242, 171, 69, 0.15) 0%, rgba(242, 171, 69, 0.05) 100%);
     border: 1px solid rgba(242, 171, 69, 0.25);
@@ -301,6 +318,59 @@ body::after {
 
 .content-body {
     padding: 2rem 2.5rem;
+}
+
+.site-intro {
+    margin-bottom: 1.5rem;
+}
+
+.site-intro h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    line-height: 1.2;
+    margin: 0 0 0.5rem;
+}
+
+.site-intro p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+    max-width: 62ch;
+}
+
+.site-focus-link {
+    display: inline-block;
+    margin-top: .75rem;
+    color: var(--primary);
+    font-size: .88rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.site-focus-link:hover {
+    text-decoration: underline;
+}
+
+.site-support {
+    scroll-margin-top: 1.5rem;
+    margin: 3rem 0 1rem;
+    padding: 1.5rem;
+    border: 1px solid var(--border-hover);
+    border-radius: 16px;
+    background: var(--bg-card);
+}
+
+.site-support h2 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    margin-bottom: .5rem;
+}
+
+.site-support p {
+    color: var(--text-soft);
+    font-size: .9rem;
+    max-width: 62ch;
 }
 
 .section-title {

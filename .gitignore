@@ -1,0 +1,4 @@
+# Local Cloudflare state and macOS metadata are not website sources.
+.wrangler/
+._*
+.DS_Store

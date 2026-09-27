@@ -71,6 +71,11 @@ function setLanguage(lang, shouldRender = true) {
     // Update dropdown value
     const select = document.getElementById("lang-select");
     if (select) select.value = lang;
+
+    const focusPageLink = document.getElementById("focus-page-link");
+    if (focusPageLink) focusPageLink.href = lang === "tr" ? "/tr/odak-muzigi" : "/focus-music";
+    const sleepPageLink = document.getElementById("sleep-page-link");
+    if (sleepPageLink) sleepPageLink.href = lang === "tr" ? "/tr/uyku-muzigi" : "/sleep-music";
     
     // Apply translations
     updateStaticTranslations();
@@ -152,6 +157,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     await fetchCatalog();
     renderApp();
     restoreLastSession();
+    if (window.location.hash === "#support") {
+        window.setTimeout(() => {
+            document.getElementById("support")?.scrollIntoView({ block: "start" });
+        }, 250);
+    }
 });
 
 // Setup DOM References
